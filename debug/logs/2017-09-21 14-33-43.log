@@ -1,0 +1,118 @@
+40.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: //EmailMissionSpecialist.sendMail('abc@gmail.com','123','body');
+Execute Anonymous: EmailMissionSpecialist em = new EmailMissionSpecialist();
+Execute Anonymous: em.sendMail('testingemail@gmail.com', 'Flight Path Change','Mission Control 123: Your flight path has been changed to avoid collision '+ 'with asteroid 2014 QO441.');
+00:33:42.1 (1013469)|USER_INFO|[EXTERNAL]|0057F000000jFC7|tran.binh@mulodo.com|Pacific Standard Time|GMT-07:00
+00:33:42.1 (1036363)|EXECUTION_STARTED
+00:33:42.1 (1040162)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+00:33:42.1 (2076454)|VARIABLE_SCOPE_BEGIN|[2]|em|EmailMissionSpecialist|true|false
+00:33:42.1 (2210423)|HEAP_ALLOCATE|[72]|Bytes:3
+00:33:42.1 (2248638)|HEAP_ALLOCATE|[77]|Bytes:152
+00:33:42.1 (2260712)|HEAP_ALLOCATE|[342]|Bytes:408
+00:33:42.1 (2274562)|HEAP_ALLOCATE|[355]|Bytes:408
+00:33:42.1 (2286715)|HEAP_ALLOCATE|[467]|Bytes:48
+00:33:42.1 (2313188)|HEAP_ALLOCATE|[139]|Bytes:6
+00:33:42.1 (2327598)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:3
+00:33:42.1 (2356727)|STATEMENT_EXECUTE|[1]
+00:33:42.1 (2359017)|STATEMENT_EXECUTE|[2]
+00:33:42.1 (2361530)|HEAP_ALLOCATE|[2]|Bytes:4
+00:33:42.1 (2366057)|HEAP_ALLOCATE|[2]|Bytes:5
+00:33:42.1 (2394075)|METHOD_ENTRY|[1]|01p7F0000091X2E|EmailMissionSpecialist.EmailMissionSpecialist()
+00:33:42.1 (2402051)|STATEMENT_EXECUTE|[1]
+00:33:42.1 (2405880)|STATEMENT_EXECUTE|[1]
+00:33:42.1 (2409961)|METHOD_EXIT|[1]|EmailMissionSpecialist
+00:33:42.1 (2424568)|HEAP_ALLOCATE|[2]|Bytes:4
+00:33:42.1 (2451781)|HEAP_ALLOCATE|[50]|Bytes:5
+00:33:42.1 (2470620)|HEAP_ALLOCATE|[56]|Bytes:5
+00:33:42.1 (2477378)|HEAP_ALLOCATE|[64]|Bytes:7
+00:33:42.1 (2493150)|SYSTEM_MODE_ENTER|false
+00:33:42.1 (2507958)|HEAP_ALLOCATE|[2]|Bytes:5
+00:33:42.1 (2518103)|CONSTRUCTOR_ENTRY|[2]|01p7F0000091X2E|<init>()
+00:33:42.1 (2539177)|VARIABLE_SCOPE_BEGIN|[1]|this|EmailMissionSpecialist|true|false
+00:33:42.1 (2576740)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x1407c5ae
+00:33:42.1 (2584805)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+00:33:42.1 (2608461)|STATEMENT_EXECUTE|[1]
+00:33:42.1 (2615005)|CONSTRUCTOR_EXIT|[2]|01p7F0000091X2E|<init>()
+00:33:42.1 (2627683)|SYSTEM_MODE_EXIT|false
+00:33:42.1 (2646102)|VARIABLE_ASSIGNMENT|[2]|em|{}|0x1407c5ae
+00:33:42.1 (2652252)|STATEMENT_EXECUTE|[3]
+00:33:42.1 (2657083)|HEAP_ALLOCATE|[3]|Bytes:22
+00:33:42.1 (2661014)|HEAP_ALLOCATE|[3]|Bytes:18
+00:33:42.1 (2663172)|HEAP_ALLOCATE|[3]|Bytes:99
+00:33:42.1 (2682399)|SYSTEM_MODE_ENTER|false
+00:33:42.1 (2690033)|HEAP_ALLOCATE|[3]|Bytes:5
+00:33:42.1 (2725543)|METHOD_ENTRY|[3]|01p7F0000091X2E|EmailMissionSpecialist.sendMail(String, String, String)
+00:33:42.1 (2749945)|VARIABLE_SCOPE_BEGIN|[3]|this|EmailMissionSpecialist|true|false
+00:33:42.1 (2763523)|VARIABLE_ASSIGNMENT|[3]|this|{}|0x1407c5ae
+00:33:42.1 (2769655)|VARIABLE_SCOPE_BEGIN|[3]|address|String|false|false
+00:33:42.1 (2781118)|VARIABLE_ASSIGNMENT|[3]|address|"testingemail@gmail.c (2 more) ..."
+00:33:42.1 (2784911)|VARIABLE_SCOPE_BEGIN|[3]|subject|String|false|false
+00:33:42.1 (2790358)|VARIABLE_ASSIGNMENT|[3]|subject|"Flight Path Change"
+00:33:42.1 (2793695)|VARIABLE_SCOPE_BEGIN|[3]|body|String|false|false
+00:33:42.1 (2800359)|VARIABLE_ASSIGNMENT|[3]|body|"Mission Control 123: (79 more) ..."
+00:33:42.1 (2809537)|STATEMENT_EXECUTE|[3]
+00:33:42.1 (3136474)|HEAP_ALLOCATE|[5]|Bytes:5
+00:33:42.1 (20980198)|HEAP_DUMP|[5]|07n7F000000PHBV|EmailMissionSpecialist|none|5
+00:33:42.1 (20996158)|STATEMENT_EXECUTE|[5]
+00:33:42.1 (21077390)|VARIABLE_SCOPE_BEGIN|[5]|mail|Messaging.SingleEmailMessage|true|false
+00:33:42.1 (21191107)|VARIABLE_ASSIGNMENT|[5]|mail|"common.api.soap.wsdl.SingleEmailMessage@54f14372"|0x2e10a24d
+00:33:42.1 (21202762)|STATEMENT_EXECUTE|[6]
+00:33:42.1 (21253554)|HEAP_ALLOCATE|[6]|Bytes:4
+00:33:42.1 (21326007)|VARIABLE_SCOPE_BEGIN|[6]|toAddresses|List<String>|true|false
+00:33:42.1 (21362542)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+00:33:42.1 (21377613)|VARIABLE_ASSIGNMENT|[6]|toAddresses|["testingemail@gmail.c (2 more) ..."]|0x6516d396
+00:33:42.1 (21385005)|STATEMENT_EXECUTE|[7]
+00:33:42.1 (21418363)|STATEMENT_EXECUTE|[8]
+00:33:42.1 (21447615)|STATEMENT_EXECUTE|[9]
+00:33:42.1 (21459390)|STATEMENT_EXECUTE|[12]
+00:33:42.1 (21478687)|HEAP_ALLOCATE|[13]|Bytes:4
+00:33:42.1 (21554837)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+00:33:42.1 (21602859)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+00:33:42.1 (43348317)|EMAIL_QUEUE|[12]|subject: Flight Path Change, bccSender: false, saveAsActivity: true, useSignature: true, toAddresses: [testingemail@gmail.com], plainTextBody: Mission Control 123: Your flight path has been changed to avoid collision with asteroid 2014 QO441., 
+00:33:42.1 (43424920)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+00:33:42.1 (43464641)|HEAP_ALLOCATE|[12]|Bytes:8
+00:33:42.1 (43489459)|VARIABLE_SCOPE_BEGIN|[12]|results|List<Messaging.SendEmailResult>|true|false
+00:33:42.1 (43582946)|VARIABLE_ASSIGNMENT|[12]|results|"common.apex.runtime.impl.ScalarList@3d42e2b8"|0x4749fd7e
+00:33:42.1 (43595274)|STATEMENT_EXECUTE|[16]
+00:33:42.1 (43623176)|METHOD_ENTRY|[16]|01p7F0000091X2E|EmailMissionSpecialist.inspectResults(List<Messaging.SendEmailResult>)
+00:33:42.1 (43654044)|VARIABLE_SCOPE_BEGIN|[20]|results|List<Messaging.SendEmailResult>|true|false
+00:33:42.1 (43702268)|VARIABLE_ASSIGNMENT|[20]|results|"common.apex.runtime.impl.ScalarList@3d42e2b8"|0x4749fd7e
+00:33:42.1 (43714996)|STATEMENT_EXECUTE|[20]
+00:33:42.1 (43716555)|STATEMENT_EXECUTE|[21]
+00:33:42.1 (43722088)|VARIABLE_SCOPE_BEGIN|[21]|sendResult|Boolean|false|false
+00:33:42.1 (43735157)|HEAP_ALLOCATE|[21]|Bytes:5
+00:33:42.1 (43743693)|VARIABLE_ASSIGNMENT|[21]|sendResult|true
+00:33:42.1 (43899472)|HEAP_ALLOCATE|[26]|Bytes:5
+00:33:42.1 (43995035)|HEAP_ALLOCATE|[26]|Bytes:4
+00:33:42.1 (44020645)|VARIABLE_SCOPE_BEGIN|[26]|res|Messaging.SendEmailResult|true|false
+00:33:42.1 (44077032)|VARIABLE_ASSIGNMENT|[26]|res|"common.api.soap.wsdl.SendEmailResult@3d42e299"|0x79fec5a4
+00:33:42.1 (44086401)|STATEMENT_EXECUTE|[26]
+00:33:42.1 (44121575)|STATEMENT_EXECUTE|[27]
+00:33:42.1 (44123476)|STATEMENT_EXECUTE|[28]
+00:33:42.1 (44127801)|HEAP_ALLOCATE|[28]|Bytes:23
+00:33:42.1 (44164654)|USER_DEBUG|[28]|DEBUG|Email sent successfully
+00:33:42.1 (44182136)|HEAP_ALLOCATE|[26]|Bytes:5
+00:33:42.1 (44192885)|VARIABLE_ASSIGNMENT|[26]|res|null|
+00:33:42.1 (44199469)|STATEMENT_EXECUTE|[35]
+00:33:42.1 (44204204)|METHOD_EXIT|[16]|01p7F0000091X2E|EmailMissionSpecialist.inspectResults(List<Messaging.SendEmailResult>)
+00:33:42.1 (44214096)|METHOD_EXIT|[3]|01p7F0000091X2E|EmailMissionSpecialist.sendMail(String, String, String)
+00:33:42.1 (44224731)|SYSTEM_MODE_EXIT|false
+00:33:42.54 (54568208)|CUMULATIVE_LIMIT_USAGE
+00:33:42.54 (54568208)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 1 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+00:33:42.54 (54568208)|CUMULATIVE_LIMIT_USAGE_END
+
+00:33:42.1 (54603888)|CODE_UNIT_FINISHED|execute_anonymous_apex
+00:33:42.1 (55337069)|EXECUTION_FINISHED

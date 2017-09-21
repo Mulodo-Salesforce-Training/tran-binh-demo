@@ -11,15 +11,15 @@ public class SentEmail {
         // of the Messaging class
         Messaging.SendEmailResult[] results = Messaging.sendEmail(
                                  new Messaging.SingleEmailMessage[] { mail });
-         
+
         // Call a helper method to inspect the returned results
         inspectResults(results);
     }
-     
+
     // Helper method
     private static Boolean inspectResults(Messaging.SendEmailResult[] results) {
         Boolean sendResult = true;
-         
+
         // sendEmail returns an array of result objects.
         // Iterate through the list to inspect results.
         // In this class, the methods send only one email,
@@ -30,10 +30,10 @@ public class SentEmail {
             }
             else {
                 sendResult = false;
-                System.debug('The following errors occurred: ' + res.getErrors());                 
+                System.debug('The following errors occurred: ' + res.getErrors());
             }
         }
-         
+
         return sendResult;
     }
 }
