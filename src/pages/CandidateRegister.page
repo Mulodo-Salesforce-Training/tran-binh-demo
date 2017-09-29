@@ -1,0 +1,170 @@
+<apex:page docType="html-5.0" controller="CandidateRegister">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+    <style>
+        #col1,#col2{width:49%;display:inline-block;}
+    </style>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+            <title>Candidates New</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Import the Design System style sheet -->
+        <apex:slds />
+    </head>
+
+    <body>
+        <!-- REQUIRED SLDS WRAPPER -->
+        <div class="slds-scope">
+            <div class="slds-align_absolute-center slds-text-heading_large" style="color: #5ADBFF;">Candidates New</div>
+            <div id="responseResult"></div>
+            <div class="slds-form slds-form_stacked" title="Information">
+                <apex:pageblock title="Information">
+                    <div class="slds-grid">
+                       <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">First Name <span style="color: red">*</span></label>
+                       </div>
+                       <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Phone <span style="color: red">*</span></label>
+                       </div>
+                    </div>
+                    <div class="slds-grid" id="col1">
+                       <div class="slds-col slds-size--3-of-4"><input type="text" class="slds-input" id="firstName" name="firstName" /></div>
+                    </div>
+                    <div class="slds-grid" id="col2">
+                       <div class="slds-col slds-size--3-of-4"><input type="number" class="slds-input" id="phone" name="phone" /></div>
+                    </div>
+                    
+                    <div class="slds-grid">
+                       <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Last Name <span style="color: red">*</span></label>
+                       </div>
+                       <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Email <span style="color: red">*</span></label>
+                       </div>
+                    </div>
+                    <div class="slds-grid" id="col1">
+                       <div class="slds-col slds-size--3-of-4"><input type="text" class="slds-input" id="lastName" name="lastName" /></div>
+                    </div>
+                    <div class="slds-grid" id="col2">
+                       <div class="slds-col slds-size--3-of-4"><input type="email" class="slds-input" id="email" name="email" /></div>
+                    </div>
+                    
+                    <div class="slds-grid">
+                       <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Birthday</label>
+                       </div>
+                    </div>
+                    <div class="slds-grid" id="col1">
+                       <div class="slds-col slds-size--3-of-4"><input type="date" class="slds-input" name="birthday" /></div>
+                    </div>
+                </apex:pageblock>
+                
+                <apex:pageblock title="Address">
+                    <div class="slds-grid">
+                       <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Street</label>
+                       </div>
+                       <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">State/Province</label>
+                       </div>
+                    </div>
+                    <div class="slds-grid" id="col1">
+                       <div class="slds-col slds-size--3-of-4"><input type="text" class="slds-input" id="street" name="street" /></div>
+                    </div>
+                    <div class="slds-grid" id="col2">
+                       <div class="slds-col slds-size--3-of-4"><input type="text" class="slds-input" id="stateProvince" name="stateProvince" /></div>
+                    </div>
+                    
+                    <div class="slds-grid">
+                       <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">City</label>
+                       </div>
+                       <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Zip/Postal Code</label>
+                       </div>
+                    </div>
+                    <div class="slds-grid" id="col1">
+                       <div class="slds-col slds-size--3-of-4"><input type="text" class="slds-input" id="city" name="city" /></div>
+                    </div>
+                    <div class="slds-grid" id="col2">
+                       <div class="slds-col slds-size--3-of-4"><input type="text" class="slds-input" id="stateProvince" name="zipPostalCode" /></div>
+                    </div>
+                    
+                    <div class="slds-grid">
+                       <div class="slds-col slds-size--3-of-6">
+                       </div>
+                       <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Country</label>
+                       </div>
+                    </div>
+                    
+                    <div class="slds-grid" id="col1">
+                    </div>
+                    <div class="slds-grid" id="col2">
+                       <div class="slds-col slds-size--3-of-4"><div class="slds-select_container">
+                            <select class="slds-select">
+                                <option>--None--</option>
+                                <option>Country 1</option>
+                                <option>Country 2</option>
+                                <option>Country 3</option>
+                            </select>
+                        </div></div>
+                    </div>
+                </apex:pageblock>
+                
+                <apex:pageblock title="Employment">
+                    <div class="slds-grid">
+                       <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Current Company</label>
+                       </div>
+                       <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Years of Experience</label>
+                       </div>
+                    </div>
+                    <div class="slds-grid" id="col1">
+                       <div class="slds-col slds-size--3-of-4"><input type="text" class="slds-input" id="street" name="currentCompany" /></div>
+                    </div>
+                    <div class="slds-grid" id="col2">
+                       <div class="slds-col slds-size--3-of-4"><input type="text" class="slds-input" id="stateProvince" name="yearsOfExperience" /></div>
+                    </div>
+                    
+                     <div class="slds-grid">
+                       <div class="slds-col slds-size--3-of-6"><label class="slds-checkbox__label">
+                        <span class="slds-checkbox_faux"></span>
+                        <span class="slds-form-element__label">Currently Employed</span>
+                        </label>
+                       </div>
+                       
+                    </div>
+                    <div class="slds-grid" id="col1">
+                       <div class="slds-col slds-size--3-of-4"><div class="slds-form-element__control">
+                        <span class="slds-checkbox">
+                        <input type="checkbox" name="currentEmployed" value="on" checked="true"/>
+                        <label class="slds-checkbox__label">
+                        <span class="slds-checkbox_faux" ></span>
+                        </label>
+                        </span>
+                    </div></div>
+                    </div>
+                </apex:pageblock>
+                
+                <apex:pageblock title="Additional Details">
+                    <div class="slds-grid">
+                       <div class="slds-col slds-size--3-of-6">
+                       </div>
+                       <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Education</label>
+                       </div>
+                    </div>
+                    
+                    <div class="slds-grid" id="col1">
+                    </div>
+                    <div class="slds-grid" id="col2">
+                       <div class="slds-col slds-size--3-of-4"><div class="slds-select_container">
+                            <select class="slds-select">
+                                <option>--None--</option>
+                                <option>HR Diploma</option>
+                                <option>BA/BS</option>
+                                <option>MA/MS/MBA</option>
+                            </select>
+                        </div></div>
+                    </div>
+                </apex:pageblock>
+               
+                <div class="slds-form-element">
+                    <button class="slds-button slds-button_neutral" onclick="">Cancel</button>
+                    <button class="slds-button slds-button_neutral" onclick="getRemoteAccount();">Save</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+</apex:page>
