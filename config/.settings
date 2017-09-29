@@ -1,0 +1,18 @@
+{
+    "projectName": "Project Mock",
+    "username": "tran.binh@mulodo.com",
+    "id": "a2c120e0-a4f8-11e7-948c-f17ed8ebe92c",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://ap5.salesforce.com",
+    "workspace": "C:\\Users\\admin\\Documents",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "CustomObject",
+        "StaticResource"
+    ]
+}

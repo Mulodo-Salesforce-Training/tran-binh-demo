@@ -27,6 +27,48 @@
         "type": "ApexPage",
         "mmState": "clean"
     },
+    "Candidate__c.object": {
+        "createdById": "0057F000000jFC7QAM",
+        "createdByName": "Tran Van Binh",
+        "createdDate": "2017-09-25T02:38:15.000Z",
+        "fileName": "unpackaged/objects/Candidate__c.object",
+        "fullName": "Candidate__c",
+        "id": "01I7F000000XEOIUA4",
+        "lastModifiedById": "0057F000000jFC7QAM",
+        "lastModifiedByName": "Tran Van Binh",
+        "lastModifiedDate": "2017-09-26T06:39:53.000Z",
+        "manageableState": "unmanaged",
+        "type": "CustomObject",
+        "mmState": "clean"
+    },
+    "Position__c.object": {
+        "createdById": "0057F000000jFC7QAM",
+        "createdByName": "Tran Van Binh",
+        "createdDate": "2017-09-25T02:46:09.000Z",
+        "fileName": "unpackaged/objects/Position__c.object",
+        "fullName": "Position__c",
+        "id": "01I7F000000XEONUA4",
+        "lastModifiedById": "0057F000000jFC7QAM",
+        "lastModifiedByName": "Tran Van Binh",
+        "lastModifiedDate": "2017-09-25T02:53:10.000Z",
+        "manageableState": "unmanaged",
+        "type": "CustomObject",
+        "mmState": "clean"
+    },
+    "Job_Application__c.object": {
+        "createdById": "0057F000000jFC7QAM",
+        "createdByName": "Tran Van Binh",
+        "createdDate": "2017-09-26T03:18:49.000Z",
+        "fileName": "unpackaged/objects/Job_Application__c.object",
+        "fullName": "Job_Application__c",
+        "id": "01I7F000000XGDOUA4",
+        "lastModifiedById": "0057F000000jFC7QAM",
+        "lastModifiedByName": "Tran Van Binh",
+        "lastModifiedDate": "2017-09-26T03:18:49.000Z",
+        "manageableState": "unmanaged",
+        "type": "CustomObject",
+        "mmState": "clean"
+    },
     "CandidatePagination.cls": {
         "createdById": "0057F000000jFC7QAM",
         "createdByName": "Tran Van Binh",
