@@ -13,6 +13,7 @@
         "ApexPage",
         "ApexTrigger",
         "CustomObject",
+        "CustomTab",
         "StaticResource"
     ]
 }

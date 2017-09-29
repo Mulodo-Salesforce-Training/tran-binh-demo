@@ -20,5 +20,13 @@
         <members>Position__c</members>
         <name>CustomObject</name>
     </types>
+    <types>
+        <members>Candidate_Classic</members>
+        <members>Candidate_Register</members>
+        <members>Candidate__c</members>
+        <members>Job_Application__c</members>
+        <members>Position__c</members>
+        <name>CustomTab</name>
+    </types>
     <version>36.0</version>
 </Package>
