@@ -14,7 +14,7 @@ trigger DoublePosition on Position__c (before insert, before update ) {
         for ( Position__c pos : listPossion ) {
             for ( Position__c posNew : ( List< Position__c> ) Trigger.New ) {
 
-                // Update check id
+                // Update check id postion
                 if ( posNew.Name == pos.Name && posNew.Id != pos.Id ) {
                     posNew.addError( 'Position name: ' + pos.Name + ' is already existed ! Error!' );
                 }
