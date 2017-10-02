@@ -10,13 +10,13 @@ trigger DoublePosition on Position__c (before insert, before update ) {
             listPossionName.add( pos.Name );
         }
 
-        List< Position__c > listPos = [SELECT Id, Name FROM Position__c WHERE Name IN :listPossionName];
-        for ( Position__c pos : listPos ) {
+        List< Position__c > listPossion = [SELECT Id, Name FROM Position__c WHERE Name IN :listPossionName];
+        for ( Position__c pos : listPossion ) {
             for ( Position__c posNew : ( List< Position__c> ) Trigger.New ) {
 
                 // Update check id
                 if ( posNew.Name == pos.Name && posNew.Id != pos.Id ) {
-                    posNew.addError( 'Position name: ' + pos.Name + ' is already existed !' );
+                    posNew.addError( 'Position name: ' + pos.Name + ' is already existed ! Error!' );
                 }
             }
         }

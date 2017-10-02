@@ -575,6 +575,54 @@
         ]
     },
     {
+        "id": "CustomLabels",
+        "type": {
+            "childXmlNames": [
+                "CustomLabel"
+            ],
+            "directoryName": "labels",
+            "inFolder": false,
+            "metaFile": false,
+            "suffix": "labels",
+            "xmlName": "CustomLabels"
+        },
+        "title": "CustomLabels",
+        "xmlName": "CustomLabels",
+        "text": "CustomLabels",
+        "key": "CustomLabels",
+        "level": 1,
+        "hasChildTypes": true,
+        "isFolder": true,
+        "inFolder": false,
+        "cls": "folder",
+        "select": false,
+        "expanded": false,
+        "children": [
+            {
+                "createdById": "0057F000000jFC7QAM",
+                "createdByName": "Tran Van Binh",
+                "createdDate": "1970-01-01T00:00:00.000Z",
+                "fileName": "labels/CustomLabels.labels",
+                "fullName": "CustomLabels",
+                "id": "CustomLabels.CustomLabels",
+                "lastModifiedById": "0057F000000jFC7QAM",
+                "lastModifiedByName": "Tran Van Binh",
+                "lastModifiedDate": "1970-01-01T00:00:00.000Z",
+                "namespacePrefix": "",
+                "type": "CustomLabels",
+                "leaf": false,
+                "title": "CustomLabels",
+                "checked": false,
+                "text": "CustomLabels",
+                "cls": "folder",
+                "level": 2,
+                "isFolder": true,
+                "children": [],
+                "select": false
+            }
+        ]
+    },
+    {
         "id": "CustomObject",
         "type": {
             "childXmlNames": [
@@ -14105,152 +14153,7 @@
                 "cls": "folder",
                 "level": 2,
                 "isFolder": true,
-                "children": [
-                    {
-                        "checked": false,
-                        "level": 3,
-                        "id": "CustomObject.WaypointTest1__c.actionOverrides",
-                        "text": "actionOverrides",
-                        "title": "actionOverrides",
-                        "isFolder": true,
-                        "children": [
-                            {
-                                "leaf": true,
-                                "checked": false,
-                                "level": 4,
-                                "text": "Accept",
-                                "title": "Accept",
-                                "isFolder": false,
-                                "id": "CustomObject.WaypointTest1__c.actionOverrides.Accept",
-                                "select": false
-                            },
-                            {
-                                "leaf": true,
-                                "checked": false,
-                                "level": 4,
-                                "text": "CancelEdit",
-                                "title": "CancelEdit",
-                                "isFolder": false,
-                                "id": "CustomObject.WaypointTest1__c.actionOverrides.CancelEdit",
-                                "select": false
-                            },
-                            {
-                                "leaf": true,
-                                "checked": false,
-                                "level": 4,
-                                "text": "Clone",
-                                "title": "Clone",
-                                "isFolder": false,
-                                "id": "CustomObject.WaypointTest1__c.actionOverrides.Clone",
-                                "select": false
-                            },
-                            {
-                                "leaf": true,
-                                "checked": false,
-                                "level": 4,
-                                "text": "Delete",
-                                "title": "Delete",
-                                "isFolder": false,
-                                "id": "CustomObject.WaypointTest1__c.actionOverrides.Delete",
-                                "select": false
-                            },
-                            {
-                                "leaf": true,
-                                "checked": false,
-                                "level": 4,
-                                "text": "Edit",
-                                "title": "Edit",
-                                "isFolder": false,
-                                "id": "CustomObject.WaypointTest1__c.actionOverrides.Edit",
-                                "select": false
-                            },
-                            {
-                                "leaf": true,
-                                "checked": false,
-                                "level": 4,
-                                "text": "Follow",
-                                "title": "Follow",
-                                "isFolder": false,
-                                "id": "CustomObject.WaypointTest1__c.actionOverrides.Follow",
-                                "select": false
-                            },
-                            {
-                                "leaf": true,
-                                "checked": false,
-                                "level": 4,
-                                "text": "List",
-                                "title": "List",
-                                "isFolder": false,
-                                "id": "CustomObject.WaypointTest1__c.actionOverrides.List",
-                                "select": false
-                            },
-                            {
-                                "leaf": true,
-                                "checked": false,
-                                "level": 4,
-                                "text": "New",
-                                "title": "New",
-                                "isFolder": false,
-                                "id": "CustomObject.WaypointTest1__c.actionOverrides.New",
-                                "select": false
-                            },
-                            {
-                                "leaf": true,
-                                "checked": false,
-                                "level": 4,
-                                "text": "SaveEdit",
-                                "title": "SaveEdit",
-                                "isFolder": false,
-                                "id": "CustomObject.WaypointTest1__c.actionOverrides.SaveEdit",
-                                "select": false
-                            },
-                            {
-                                "leaf": true,
-                                "checked": false,
-                                "level": 4,
-                                "text": "Tab",
-                                "title": "Tab",
-                                "isFolder": false,
-                                "id": "CustomObject.WaypointTest1__c.actionOverrides.Tab",
-                                "select": false
-                            },
-                            {
-                                "leaf": true,
-                                "checked": false,
-                                "level": 4,
-                                "text": "View",
-                                "title": "View",
-                                "isFolder": false,
-                                "id": "CustomObject.WaypointTest1__c.actionOverrides.View",
-                                "select": false
-                            }
-                        ],
-                        "select": false,
-                        "cls": "folder"
-                    },
-                    {
-                        "checked": false,
-                        "level": 3,
-                        "id": "CustomObject.WaypointTest1__c.fields",
-                        "text": "fields",
-                        "title": "fields",
-                        "isFolder": true,
-                        "children": [
-                            {
-                                "leaf": true,
-                                "checked": false,
-                                "level": 4,
-                                "text": "Waypoint__c",
-                                "title": "Waypoint__c",
-                                "isFolder": false,
-                                "id": "CustomObject.WaypointTest1__c.fields.Waypoint__c",
-                                "select": false
-                            }
-                        ],
-                        "select": false,
-                        "cls": "folder"
-                    }
-                ],
+                "children": [],
                 "select": false
             },
             {

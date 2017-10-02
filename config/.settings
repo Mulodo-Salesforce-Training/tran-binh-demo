@@ -12,6 +12,7 @@
         "ApexComponent",
         "ApexPage",
         "ApexTrigger",
+        "CustomLabels",
         "CustomObject",
         "CustomTab",
         "StaticResource"

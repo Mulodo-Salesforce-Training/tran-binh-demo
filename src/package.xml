@@ -3,15 +3,18 @@
     <types>
         <members>CandidatePagination</members>
         <members>CandidateRegister</members>
+        <members>EmailManager</members>
         <name>ApexClass</name>
     </types>
     <types>
         <members>Candidate</members>
         <members>CandidateRegister</members>
+        <members>Position</members>
         <name>ApexPage</name>
     </types>
     <types>
         <members>DoublePosition</members>
+        <members>EmailSender</members>
         <name>ApexTrigger</name>
     </types>
     <types>
