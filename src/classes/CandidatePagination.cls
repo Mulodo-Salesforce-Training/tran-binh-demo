@@ -72,4 +72,8 @@ public with sharing class CandidatePagination {
     public Integer getTotalPage () {
         return totalSize / customListSize + 1;
     }
+    //This will get total record
+    public Integer getTotalRecord () {
+        return totalSize;
+    }
 }

@@ -31,5 +31,9 @@
         <members>Position__c</members>
         <name>CustomTab</name>
     </types>
+    <types>
+        <members>resource</members>
+        <name>StaticResource</name>
+    </types>
     <version>36.0</version>
 </Package>
