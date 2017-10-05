@@ -1,4 +1,4 @@
-public with sharing class CandidatePagination {
+public with sharing class MR_CandidatePagination {
     // the size of list per page
     private final Integer LIST_SIZE_PAGE = 5;
     private Integer count;
@@ -19,7 +19,7 @@ public with sharing class CandidatePagination {
     }
 
     // Set the total size in the constructor
-    public CandidatePagination () {
+    public MR_CandidatePagination () {
         totalSize           = [SELECT count() FROM Candidate__c];
         count               = 0;
         customListSize      = LIST_SIZE_PAGE;

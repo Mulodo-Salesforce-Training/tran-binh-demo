@@ -4,11 +4,17 @@
         <members>CandidatePagination</members>
         <members>CandidateRegister</members>
         <members>EmailManager</members>
+        <members>MR_CandidatePagination</members>
+        <members>MR_CandidateRegister</members>
+        <members>MR_EmailManager</members>
         <name>ApexClass</name>
     </types>
     <types>
         <members>Candidate</members>
         <members>CandidateRegister</members>
+        <members>MR_CandidateRegister</members>
+        <members>MR_ListCadidate</members>
+        <members>MR_Position</members>
         <members>Position</members>
         <name>ApexPage</name>
     </types>
@@ -28,6 +34,8 @@
         <members>Candidate_Register</members>
         <members>Candidate__c</members>
         <members>Job_Application__c</members>
+        <members>MR_Candidate_Register</members>
+        <members>MR_List_Candidate</members>
         <members>Position__c</members>
         <name>CustomTab</name>
     </types>

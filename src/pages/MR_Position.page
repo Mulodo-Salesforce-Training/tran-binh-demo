@@ -16,10 +16,10 @@
                 <apex:form id="theForm">
                     <apex:panelGrid columns="4" width="100%">
                         <apex:outputPanel id="myButtons">
-                            <apex:commandButton action="{!First}" title="First" value="<<" reRender="myPanel,myButtons"/>
-                            <apex:commandButton action="{!Previous}" title="Previous" value="<" reRender="myPanel,myButtons"/>        
-                            <apex:commandButton action="{!Next}" title="Next" value=">" reRender="myPanel,myButtons"/>
-                            <apex:commandButton action="{!Last}" title="Last" value=">>" reRender="myPanel,myButtons"/>        
+                            <apex:commandButton action="{!First}"    title="First" value="<<" reRender="myPanel,myButtons"/>
+                            <apex:commandButton action="{!Previous}" title="Previous" value="<" reRender="myPanel,myButtons"/>       
+                            <apex:commandButton action="{!Next}"     title="Next" value=">" reRender="myPanel,myButtons"/>
+                            <apex:commandButton action="{!Last}"     title="Last" value=">>" reRender="myPanel,myButtons"/>        
                         </apex:outputPanel>
                     </apex:panelGrid>
                 </apex:form>

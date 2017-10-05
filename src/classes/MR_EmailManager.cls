@@ -1,4 +1,4 @@
-public class EmailManager {
+public class MR_EmailManager {
     public static void sendConfirmEmails(List<Candidate__c> lstCandidates) {
         List<Messaging.SingleEmailMessage> listMail = new List<Messaging.SingleEmailMessage>();
         //Select EmailTemplate send mail

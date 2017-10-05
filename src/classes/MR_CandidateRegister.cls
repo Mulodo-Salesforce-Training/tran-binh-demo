@@ -1,6 +1,6 @@
-public with sharing class CandidateRegister {
+public with sharing class MR_CandidateRegister {
     // procedure constructor
-	public CandidateRegister(ApexPages.StandardController controller) {
+	public MR_CandidateRegister(ApexPages.StandardController controller) {
 
 	}
     

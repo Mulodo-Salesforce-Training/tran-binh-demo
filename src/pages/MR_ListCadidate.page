@@ -1,4 +1,4 @@
-<apex:page tabStyle="Candidate_Classic__tab"  showHeader="true" standardStylesheets="true" sidebar="true" applyHtmlTag="true" applyBodyTag="false" controller="CandidatePagination">
+<apex:page tabStyle="MR_List_Candidate__tab"  showHeader="true" standardStylesheets="true" sidebar="true" applyHtmlTag="true" applyBodyTag="false" controller="CandidatePagination">
     <!--ADD XMLNS TO USE SVG FROM VISUALFORCE-->
     <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
         <head>
