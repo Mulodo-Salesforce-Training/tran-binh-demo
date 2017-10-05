@@ -1914,4 +1914,23 @@
         <errorConditionFormula>LEN(SUBSTITUTE(Phone__c, &apos; &apos;, &apos;&apos;)) &lt; 10 || LEN(SUBSTITUTE(Phone__c, &apos; &apos;, &apos;&apos;)) &gt; 11  ||  NOT(ISNUMBER(SUBSTITUTE(Phone__c, &apos; &apos;, &apos;&apos;)) )</errorConditionFormula>
         <errorMessage>Incorrect phone number format</errorMessage>
     </validationRules>
+    <webLinks>
+        <fullName>View_Weather</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>View Weather</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/CandidateWeatherControllerCC?id={!Candidate__c.Id}</url>
+    </webLinks>
 </CustomObject>

@@ -6,11 +6,11 @@
           <meta http-equiv="x-ua-compatible" content="ie=edge" />
           <title>Salesforce Lightning Design System Trailhead Module</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-         
+
           <!-- Import the Design System style sheet -->
           <apex:slds />
         </head>
-        
+
         <body>
             <apex:pageBlock >
                 <apex:form >
@@ -52,37 +52,37 @@
                                     <!--NAME-->
                                     <th scope="col">
                                         <div class="slds-truncate" title="{!$ObjectType.Candidate__c.fields.Name.Label}">
-                                                {!$ObjectType.Candidate__c.fields.Name.Label}
+                                            {!$ObjectType.Candidate__c.fields.Name.Label}
                                         </div>
                                     </th>
                                     <!--FIRST NAME-->
                                     <th scope="col">
                                         <div class="slds-truncate" title="{!$ObjectType.Candidate__c.fields.First_Name__c.Label}">
-                                                {!$ObjectType.Candidate__c.fields.First_Name__c.Label}
+                                            {!$ObjectType.Candidate__c.fields.First_Name__c.Label}
                                         </div>
                                     </th>
                                     <!--LAST NAME-->
                                     <th scope="col">
                                         <div class="slds-truncate" title="{!$ObjectType.Candidate__c.fields.Last_Name__c.Label}">
-                                                {!$ObjectType.Candidate__c.fields.Last_Name__c.Label}
+                                            {!$ObjectType.Candidate__c.fields.Last_Name__c.Label}
                                         </div>
                                     </th>
                                     <!--CITY-->
                                     <th scope="col">
                                         <div class="slds-truncate" title="{!$ObjectType.Candidate__c.fields.City__c.Label}">
-                                                {!$ObjectType.Candidate__c.fields.City__c.Label}
+                                            {!$ObjectType.Candidate__c.fields.City__c.Label}
                                         </div>
                                     </th>
                                     <!--STATE/PROVINCE-->
                                     <th scope="col">
                                         <div class="slds-truncate" title="{!$ObjectType.Candidate__c.fields.State_Province__c.Label}">
-                                                {!$ObjectType.Candidate__c.fields.State_Province__c.Label}
+                                            {!$ObjectType.Candidate__c.fields.State_Province__c.Label}
                                         </div>
                                     </th>
                                     <!--PHONE-->
                                     <th scope="col">
                                         <div class="slds-truncate" title="{!$ObjectType.Candidate__c.fields.Phone__c.Label}">
-                                                {!$ObjectType.Candidate__c.fields.Phone__c.Label}
+                                            {!$ObjectType.Candidate__c.fields.Phone__c.Label}
                                         </div>
                                     </th>
                                 </tr>
@@ -96,7 +96,7 @@
                                     <apex:variable var="index" value="{!index + 1}"/>
                                     <tr>
                                         <th scope="col" data-label="Index">
-                                                {!index}
+                                            {!index}
                                         </th>
                                         <!--NAME-->
                                         <td scope="col" data-label="{!$ObjectType.Candidate__c.fields.Name.Label}">
@@ -107,31 +107,31 @@
                                         <!--FIRST NAME-->
                                         <td data-label="{!$ObjectType.Candidate__c.fields.First_Name__c.Label}">
                                             <div class="slds-truncate" title="{! c.First_Name__c}">
-                                                    {! c.First_Name__c}
+                                                {! c.First_Name__c}
                                             </div>
                                         </td>
                                         <!--LAST NAME-->
                                         <td scope="row" data-label="{!$ObjectType.Candidate__c.fields.Last_Name__c.Label}">
                                             <div class="slds-truncate" title="{! c.Last_Name__c}">
-                                                    {! c.Last_Name__c}
+                                                {! c.Last_Name__c}
                                             </div>
                                         </td>
                                         <!--CITY-->
                                         <td scope="row" data-label="{!$ObjectType.Candidate__c.fields.City__c.Label}">
                                             <div class="slds-truncate" title="{! c.City__c}">
-                                                    {! c.City__c}
+                                                {! c.City__c}
                                             </div>
                                         </td>
                                         <!--STATE/PROVINCE-->
                                         <td scope="row" data-label="{!$ObjectType.Candidate__c.fields.State_Province__c.Label}">
                                             <div class="slds-truncate" title="{! c.State_Province__c}">
-                                                    {! c.State_Province__c}
+                                                {! c.State_Province__c}
                                             </div>
                                         </td>
                                         <!--PHONE-->
                                         <td scope="row" data-label="{!$ObjectType.Candidate__c.fields.Phone__c.Label}">
                                             <div class="slds-truncate" title="{! c.Phone__c}">
-                                                    {! c.Phone__c}
+                                                {! c.Phone__c}
                                             </div>
                                         </td>
                                     </tr>
@@ -162,21 +162,21 @@
                                 <apex:variable var="total" value="{!TotalPage}">
                                     <button class="slds-button slds-button_neutral">Total page: {!total}</button>
                                 </apex:variable>
-                                </apex:form>
+                            </apex:form>
                         </apex:outputPanel>
                     </apex:pageBlockButtons>
-                </apex:pageBlock>        
+                </apex:pageBlock>
                 <!-- PAGINATION END-->
-                
+
                 <!-- FOOTER -->
-                    <div>
-                         <footer role="contentinfo" class="slds-p-around--large">
-                             <div class="slds-grid slds-grid--align-spread">
-                                 <p class="slds-col">Salesforce Lightning Design System Example</p>
-                                 <p class="slds-col">&copy; Mulodo</p>
-                             </div>
-                         </footer>
-                    </div>
+                <div>
+                    <footer role="contentinfo" class="slds-p-around--large">
+                        <div class="slds-grid slds-grid--align-spread">
+                            <p class="slds-col">Salesforce Lightning Design System Example</p>
+                            <p class="slds-col">&copy; Mulodo</p>
+                        </div>
+                    </footer>
+                </div>
               </div>
          </body>
     </html>

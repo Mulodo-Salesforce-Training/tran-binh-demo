@@ -1,5 +1,10 @@
 public with sharing class CandidateRegister {
-    @RemoteAction
+    // procedure constructor
+	public CandidateRegister(ApexPages.StandardController controller) {
+
+	}
+    
+   @RemoteAction
     public static String toRegister ( String  firstName,
                                       String  lastName,
                                       String  birthday,
@@ -9,15 +14,14 @@ public with sharing class CandidateRegister {
                                       String  city,
                                       String  stateProvince,
                                       String  zipPostalCode,
-                                      //String  country,
+                                      String  country,
                                       String  currentCompany,
-                                      Boolean currentlyEmployed//,
-                                      //Integer yearsOfExperience,
-                                      //String education
+                                      Boolean currentlyEmployed,
+                                      Integer yearsOfExperience,
+                                      String  education
                                     ) {
                                           
-        Candidate__c candidate               = new Candidate__c();                   
-        
+        Candidate__c candidate               = new Candidate__c();
         candidate.First_Name__c              = firstName;
         candidate.Last_Name__c               = lastName;
         //check and initialization date
@@ -31,13 +35,11 @@ public with sharing class CandidateRegister {
         candidate.City__c                    = city;
         candidate.State_Province__c          = stateProvince;
         candidate.Zip_Postal_Code__c         = zipPostalCode;
-        //candidate.Country__c                 = country;
+        candidate.Country__c                 = country;
         candidate.Current_Employer__c        = currentCompany;
         candidate.Currently_Employed__c      = currentlyEmployed;
-        //if(!String.isBlank(String.valueOf(yearsOfExperience))) {
-        	//candidate.Years_of_Experience__c = yearsOfExperience;
-        //}    
-        //candidate.Education__c        = education;
+        candidate.Years_of_Experience__c     = yearsOfExperience;
+        candidate.Education__c               = education;
 
         try {
             insert candidate;
@@ -47,29 +49,24 @@ public with sharing class CandidateRegister {
 
         return firstName;
     }
-    
-    public String seCountry { get; set; }
-    public List<SelectOption> getCountry(){
-        List<SelectOption> options = new List<SelectOption>();
-    	options.add(new SelectOption('None','--None--'));
-        for(Candidate__c candidate : [SELECT country__c FROM Candidate__c WHERE Candidate__c.country__c =: seCountry])
-        {
-            options.add(new SelectOption('Country__c','Country__c'));
-        }
-        return options;
+
+    @RemoteAction
+	public static string getJSONCandidates() {
+		// serialize to JSON
+		return JSON.serialize([SELECT First_Name__c, Last_Name__c FROM Candidate__c]);
+	}
+
+    @RemoteAction
+	public static string getCountryPickList() {
+		Schema.DescribeFieldResult fieldCountry = Candidate__c.Country__c.getDescribe();
+		List<Schema.PicklistEntry> pickListCountry = fieldCountry.getPicklistValues();
+		return JSON.serialize(pickListCountry);
     }
     
-    public List<SelectOption> educationLst {get;set;}
-    public String selectedEducation{get;set;}
-    public String selectedValues {get;set;}
-    public CandidateRegister(){
-      educationLst = new List<SelectOption>();
-        
-      educationLst.add(new SelectOption('','--None--'));
-      educationLst.add(new SelectOption('HS Diploma','HS Diploma'));
-      educationLst.add(new SelectOption('BA/BS','BA/BS'));
-      educationLst.add(new SelectOption('MA/MS/MBA','MA/MS/MBA'));
-      educationLst.add(new SelectOption('Ph.D.','Ph.D.'));
-      educationLst.add(new SelectOption('Post Doc','Post Doc'));   
- 	}
+    @RemoteAction
+	public static string getEducationPickList() {
+		Schema.DescribeFieldResult fieldEducation = Candidate__c.Education__c.getDescribe();
+		List<Schema.PicklistEntry> pickListEducation = fieldEducation.getPicklistValues();
+		return JSON.serialize(pickListEducation);
+	}
 }

@@ -1,4 +1,4 @@
-<apex:page docType="html-5.0" controller="CandidateRegister">
+<apex:page docType="html-5.0" standardController="Candidate__c" extensions="CandidateRegister" tabStyle="Candidate_Register__tab">
     <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
     <style>
         #col1,#col2{width:49%;display:inline-block;}
@@ -12,9 +12,10 @@
         <!-- Import the Design System style sheet -->
         <apex:slds />
         <apex:includeScript value="{!URLFOR($Resource.resource)}"/>
+        <apex:includeScript value="{!URLFOR($Resource.angular_min_js)}"/>
     </head>
 
-    <body>
+    <body ng-app="demoApp" class="slds-container" ng-controller="myCtrl">
         <!-- REQUIRED SLDS WRAPPER -->
         <div class="slds-scope">
             <div class="slds-align_absolute-center slds-text-heading_large" style="color: #5ADBFF;">Candidates New</div>
@@ -33,7 +34,7 @@
                     <div class="slds-grid" id="col2">
                        <div class="slds-col slds-size--3-of-4"><input type="number" class="slds-input" id="phone" name="phone" /></div>
                     </div>
-                    
+
                     <div class="slds-grid">
                        <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Last Name <span style="color: red">*</span></label>
                        </div>
@@ -46,7 +47,7 @@
                     <div class="slds-grid" id="col2">
                        <div class="slds-col slds-size--3-of-4"><input type="email" class="slds-input" id="email" name="email" /></div>
                     </div>
-                    
+
                     <div class="slds-grid">
                        <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Birthday</label>
                        </div>
@@ -55,7 +56,7 @@
                        <div class="slds-col slds-size--3-of-4"><input type="date" class="slds-input" name="birthday" id="birthday"/></div>
                     </div>
                 </apex:pageblock>
-                
+
                 <apex:pageblock title="Address">
                     <div class="slds-grid">
                        <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Street</label>
@@ -69,7 +70,7 @@
                     <div class="slds-grid" id="col2">
                        <div class="slds-col slds-size--3-of-4"><input type="text" class="slds-input" id="stateProvince" name="stateProvince" /></div>
                     </div>
-                    
+
                     <div class="slds-grid">
                        <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">City</label>
                        </div>
@@ -82,28 +83,27 @@
                     <div class="slds-grid" id="col2">
                        <div class="slds-col slds-size--3-of-4"><input type="text" class="slds-input" id="zipPostalCode" name="zipPostalCode" /></div>
                     </div>
-                    
+
                     <div class="slds-grid">
                        <div class="slds-col slds-size--3-of-6">
                        </div>
                        <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Country</label>
                        </div>
                     </div>
-                    
-                    <div class="slds-grid" id="col1">
+						 <div class="slds-grid" id="col1">
                     </div>
                     <div class="slds-grid" id="col2">
-						<div class="slds-col slds-size--3-of-4"><div class="slds-select_container">
-                            <select class="slds-select" id="country" name="country">
-                                <option>--None--</option>
-                                <option>Greece</option>
-                                <option>Grenada</option>
-                                <option>Guyana</option>
+                        <form class="slds-form">
+                            <select >
+                                <option>----------------------------------None--------------------------------</option>
+                                <option ng-repeat="option in countryPickList" id="country">
+                                    {{option.label}}
+                                </option>
                             </select>
-                        </div></div>
+                        </form>
                     </div>
                 </apex:pageblock>
-                
+
                 <apex:pageblock title="Employment">
                     <div class="slds-grid">
                        <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Current Company</label>
@@ -117,14 +117,14 @@
                     <div class="slds-grid" id="col2">
                        <div class="slds-col slds-size--3-of-4"><input type="text" class="slds-input" id="yearsOfExperience" name="yearsOfExperience" /></div>
                     </div>
-                    
+
                      <div class="slds-grid">
                        <div class="slds-col slds-size--3-of-6"><label class="slds-checkbox__label">
                         <span class="slds-checkbox_faux"></span>
                         <span class="slds-form-element__label">Currently Employed</span>
                         </label>
                        </div>
-                       
+
                     </div>
                     <div class="slds-grid" id="col1">
                        <div class="slds-col slds-size--3-of-4"><div class="slds-form-element__control">
@@ -137,7 +137,7 @@
                     </div></div>
                     </div>
                 </apex:pageblock>
-                
+
                 <apex:pageblock title="Additional Details">
                     <div class="slds-grid">
                        <div class="slds-col slds-size--3-of-6">
@@ -145,27 +145,34 @@
                        <div class="slds-col slds-size--3-of-6"><label class="slds-form-element__label">Education</label>
                        </div>
                     </div>
-                    
-                    <div class="slds-grid" id="col1">
+						 <div class="slds-grid" id="col1">
                     </div>
                     <div class="slds-grid" id="col2">
-                       <div class="slds-col slds-size--3-of-4"><div class="slds-select_container">
-                            <select class="slds-select" id="education" name="education">
-                                <option>--None--</option>
-                                <option>HR Diploma</option>
-                                <option>BA/BS</option>
-                                <option>MA/MS/MBA</option>
+                        <form class="slds-form">
+                            <select >
+                                <option>----------------------------------None--------------------------------</option>
+                                <option ng-repeat="option in educationPickList" id="education">
+                                    {{option.label}}
+                                </option>
                             </select>
-                        </div></div>
+                        </form>
                     </div>
                 </apex:pageblock>
-               
+
                 <div class="slds-form-element">
                     <button class="slds-button slds-button_neutral" onclick="">Cancel</button>
                     <button class="slds-button slds-button_neutral" onclick="getRemoteAccount();">Save</button>
                 </div>
             </div>
         </div>
-    </body>
+           <script>
+                angular.module("demoApp", [])
+                        .controller("myCtrl", ($scope) => {
+                            $scope.candidates = {!JSONcandidates};
+                            $scope.countryPickList = {!countryPickList};
+                            $scope.educationPickList = {!educationPickList};
+                        })
+            </script>
+    	</body>
     </html>
 </apex:page>

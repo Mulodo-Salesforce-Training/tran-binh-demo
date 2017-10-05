@@ -5,24 +5,24 @@
         <tbody>
             <tr>
                 <!-- Position List -->
-                <apex:pageBlockTable value="{! positions }" var="cd">
-                    <apex:column value="{! cd.Functional_Area__c }"/>
-                    <apex:column value="{! cd.Hiring_Manager__c }"/>
-                    <apex:column value="{! cd.Java__c }"/>
-                    <apex:column value="{! cd.JavaScript__c }"/>
-                    <apex:column value="{! cd.Job_Description__c }"/>
-                    <apex:column value="{! cd.Job_Level__c }"/>
+                <apex:pageBlockTable value="{! positions }" var="position">
+                    <apex:column value="{! position.Functional_Area__c }"/>
+                    <apex:column value="{! position.Hiring_Manager__c }"/>
+                    <apex:column value="{! position.Java__c }"/>
+                    <apex:column value="{! position.JavaScript__c }"/>
+                    <apex:column value="{! position.Job_Description__c }"/>
+                    <apex:column value="{! position.Job_Level__c }"/>
                 </apex:pageBlockTable>   
-                    <apex:form id="theForm">
-                        <apex:panelGrid columns="4" width="100%">
-                            <apex:outputPanel id="myButtons">
-                                <apex:commandButton action="{!First}" title="First" value="<<"  reRender="myPanel,myButtons"/>
-                                <apex:commandButton action="{!Previous}" title="Previous" value="<" reRender="myPanel,myButtons"/>        
-                                <apex:commandButton action="{!Next}" title="Next" value=">" reRender="myPanel,myButtons"/>
-                                <apex:commandButton action="{!Last}" title="Last" value=">>" reRender="myPanel,myButtons"/>        
-                            </apex:outputPanel>
-                        </apex:panelGrid>
-					</apex:form>
+                <apex:form id="theForm">
+                    <apex:panelGrid columns="4" width="100%">
+                        <apex:outputPanel id="myButtons">
+                            <apex:commandButton action="{!First}" title="First" value="<<" reRender="myPanel,myButtons"/>
+                            <apex:commandButton action="{!Previous}" title="Previous" value="<" reRender="myPanel,myButtons"/>        
+                            <apex:commandButton action="{!Next}" title="Next" value=">" reRender="myPanel,myButtons"/>
+                            <apex:commandButton action="{!Last}" title="Last" value=">>" reRender="myPanel,myButtons"/>        
+                        </apex:outputPanel>
+                    </apex:panelGrid>
+                </apex:form>
            	 </tr>
         </tbody>
     </table>

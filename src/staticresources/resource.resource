@@ -8,11 +8,11 @@ function getRemoteAccount () {
     var city              = document.getElementById('city').value;
     var stateProvince     = document.getElementById('stateProvince').value;
     var zipPostalCode     = document.getElementById('zipPostalCode').value;
-    //var country           = document.getElementById('country').value;
+    var country           = document.getElementById('country').value;
     var currentCompany    = document.getElementById('currentCompany').value;
     var currentlyEmployed = document.getElementById('currentlyEmployed').value;
-    //var yearsOfExperience = document.getElementById('yearsOfExperience').value;
-    //var education         = document.getElementById('selectedValues').value;
+    var yearsOfExperience = document.getElementById('yearsOfExperience').value;
+    var education         = document.getElementById('education').value;
 
     Visualforce.remoting.Manager.invokeAction (
         'CandidateRegister.toRegister',
@@ -25,16 +25,15 @@ function getRemoteAccount () {
             city, 
             stateProvince, 
             zipPostalCode, 
-            //country, 
+            country, 
             currentCompany, 
             currentlyEmployed, 
-            //yearsOfExperience, 
-            //education,
+            yearsOfExperience, 
+            education,
         function ( result, event ) {
             if ( event.status ) {
                 if ( event.result == firstName ) {
                     document.getElementById( "responseResult" ).innerHTML = "Create success Candidates with first name: " + firstName;
-                    
                 } else {
                     document.getElementById( "responseResult" ).innerHTML = event.result + "<br/>";
                 }

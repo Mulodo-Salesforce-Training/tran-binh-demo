@@ -1,10 +1,10 @@
 public with sharing class CandidatePagination {
     // the size of list per page
-    private final Integer LIST_SIZE_PAGE = 5;                
+    private final Integer LIST_SIZE_PAGE = 5;
     private Integer count;
     private Integer totalSize;
     // custom size of list per page will be changed be user
-    public Integer customListSize { get; set; } 
+    public Integer customListSize { get; set; }
     public List< Candidate__c > candidates {
         get {
             //Correct count after change size of list
@@ -59,15 +59,15 @@ public with sharing class CandidatePagination {
     public Boolean getDisableNext () {
         if ( count + customListSize < totalSize ) {
             return false;
-        } 
+        }
             return true;
     }
-    
+
     // This will get current page
     public Integer getCurrentPage () {
         return count / customListSize + 1;
     }
-    
+
     // This will get current page
     public Integer getTotalPage () {
         return totalSize / customListSize + 1;
