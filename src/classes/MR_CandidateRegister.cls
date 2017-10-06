@@ -18,9 +18,7 @@ public with sharing class MR_CandidateRegister {
                                       String  currentCompany,
                                       Boolean currentlyEmployed,
                                       Integer yearsOfExperience,
-                                      String  education
-                                    ) {
-                                          
+                                      String  education) {
         Candidate__c candidate               = new Candidate__c();
         candidate.First_Name__c              = firstName;
         candidate.Last_Name__c               = lastName;
@@ -38,7 +36,12 @@ public with sharing class MR_CandidateRegister {
         candidate.Country__c                 = country;
         candidate.Current_Employer__c        = currentCompany;
         candidate.Currently_Employed__c      = currentlyEmployed;
-        candidate.Years_of_Experience__c     = yearsOfExperience;
+        if( String.isBlank( yearsOfExperience + '' ) )  {
+            candidate.Years_of_Experience__c     = 0;
+        } else {
+            candidate.Years_of_Experience__c     = yearsOfExperience;
+        }      
+       
         candidate.Education__c               = education;
 
         try {
@@ -47,7 +50,7 @@ public with sharing class MR_CandidateRegister {
             return ex.getMessage();
         }
 
-        return firstName;
+        return candidate.Id;
     }
 
     @RemoteAction

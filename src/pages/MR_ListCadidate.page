@@ -1,11 +1,11 @@
-<apex:page tabStyle="MR_List_Candidate__tab"  showHeader="true" standardStylesheets="true" sidebar="true" applyHtmlTag="true" applyBodyTag="false" controller="CandidatePagination">
+<apex:page tabStyle="MR_List_Candidate__tab"  showHeader="true" standardStylesheets="true" sidebar="true" applyHtmlTag="true" applyBodyTag="false" controller="MR_CandidatePagination">
     <!--ADD XMLNS TO USE SVG FROM VISUALFORCE-->
     <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
         <head>
-          <meta charset="utf-8" />
-          <meta http-equiv="x-ua-compatible" content="ie=edge" />
+          <meta charset="utf-8"/>
+          <meta http-equiv="x-ua-compatible" content="ie=edge"/>
           <title>Salesforce Lightning Design System Trailhead Module</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
           <!-- Import the Design System style sheet -->
           <apex:slds />

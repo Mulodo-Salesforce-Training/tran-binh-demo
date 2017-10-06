@@ -1,4 +1,4 @@
-trigger DoublePosition on Position__c (before insert, before update ) {
+trigger MR_DoublePosition on Position__c (before insert, before update ) {
 
     Integer count = 0;
     List< String > listPossionName = new List< String >();

@@ -1,4 +1,4 @@
-<apex:page docType="html-5.0" standardController="Candidate__c" extensions="CandidateRegister" tabStyle="Candidate_Register__tab">
+<apex:page docType="html-5.0" standardController="Candidate__c" extensions="CandidateRegister" tabStyle="MR_Candidate_Register__tab">
     <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
     <style>
         #col1,#col2{width:49%;display:inline-block;}
@@ -115,7 +115,7 @@
                        <div class="slds-col slds-size--3-of-4"><input type="text" class="slds-input" id="currentCompany" name="currentCompany" /></div>
                     </div>
                     <div class="slds-grid" id="col2">
-                       <div class="slds-col slds-size--3-of-4"><input type="text" class="slds-input" id="yearsOfExperience" name="yearsOfExperience" /></div>
+                       <div class="slds-col slds-size--3-of-4"><input type="number" class="slds-input" id="yearsOfExperience" name="yearsOfExperience" /></div>
                     </div>
 
                      <div class="slds-grid">

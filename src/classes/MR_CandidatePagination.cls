@@ -1,5 +1,5 @@
 public with sharing class MR_CandidatePagination {
-    // the size of list per page
+     // the size of list per page
     private final Integer LIST_SIZE_PAGE = 5;
     private Integer count;
     private Integer totalSize;
@@ -24,7 +24,7 @@ public with sharing class MR_CandidatePagination {
         count               = 0;
         customListSize      = LIST_SIZE_PAGE;
     }
-
+    
     // User clicked to first
     public PageReference toFirst () {
         count = 0;
