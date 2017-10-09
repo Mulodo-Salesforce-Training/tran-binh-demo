@@ -1931,6 +1931,6 @@
         <protected>false</protected>
         <showsLocation>false</showsLocation>
         <showsStatus>false</showsStatus>
-        <url>/apex/CandidateWeatherControllerCC?id={!Candidate__c.Id}</url>
+        <url>/apex/MR_CandidateWeatherControllerCC?id={!Candidate__c.Id}</url>
     </webLinks>
 </CustomObject>

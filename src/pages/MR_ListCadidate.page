@@ -152,13 +152,21 @@
                                 <apex:variable var="total" value="{!TotalRecord}">
                                     <button class="slds-button slds-button_neutral">Total record: {!total}</button>
                                 </apex:variable>
-                                <apex:commandButton action="{!toFirst}" title="First" value="First" disabled="{!disablePrevious}" reRender="CandidateTable, PaginationButton" styleClass="slds-button slds-button_neutral" />
-                                <apex:commandButton action="{!toPrevious}" title="Previous" value="Prev" disabled="{!disablePrevious}" reRender="CandidateTable, PaginationButton" styleClass="slds-button slds-button_neutral" />
+                                <apex:commandButton action="{!selectAction}" title="First" value="First" disabled="{!disablePrevious}" reRender="CandidateTable, PaginationButton" styleClass="slds-button slds-button_neutral">
+                                       <apex:param name="paramValue" value="First"></apex:param>
+                                </apex:commandButton>
+                                <apex:commandButton action="{!selectAction}" title="Previous" value="Prev" disabled="{!disablePrevious}" reRender="CandidateTable, PaginationButton" styleClass="slds-button slds-button_neutral">
+                                	<apex:param name="paramValue" value="Previous"></apex:param>
+                                </apex:commandButton>
                                 <apex:variable var="current" value="{!CurrentPage}">
                                     <button class="slds-button slds-button_neutral">{!current}</button>
                                 </apex:variable>
-                                <apex:commandButton action="{!toNext}" title="Next" value="Next" disabled="{!disableNext}" reRender="CandidateTable, PaginationButton" styleClass="slds-button slds-button_neutral" />
-                                <apex:commandButton action="{!toEnd}" title="End" value="End" disabled="{!disableNext}" reRender="CandidateTable, PaginationButton" styleClass="slds-button slds-button_neutral" />
+                                <apex:commandButton action="{!selectAction}" title="Next" value="Next" disabled="{!disableNext}" reRender="CandidateTable, PaginationButton" styleClass="slds-button slds-button_neutral">
+                                     <apex:param name="paramValue" value="Next"></apex:param>
+                                </apex:commandButton>
+                                <apex:commandButton action="{!selectAction}" title="End" value="End" disabled="{!disableNext}" reRender="CandidateTable, PaginationButton" styleClass="slds-button slds-button_neutral">
+                                    <apex:param name="paramValue" value="End"></apex:param>
+                                </apex:commandButton>
                                 <apex:variable var="total" value="{!TotalPage}">
                                     <button class="slds-button slds-button_neutral">Total page: {!total}</button>
                                 </apex:variable>

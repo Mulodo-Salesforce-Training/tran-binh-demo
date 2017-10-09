@@ -15,7 +15,7 @@ function getRemoteAccount () {
     var education         = document.getElementById('education').value;
 
     Visualforce.remoting.Manager.invokeAction (
-        'CandidateRegister.toRegister',
+        'MR_CandidateRegister.toRegister',
             firstName, 
             lastName, 
             birthday, 

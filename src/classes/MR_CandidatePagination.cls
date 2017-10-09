@@ -3,6 +3,7 @@ public with sharing class MR_CandidatePagination {
     private final Integer LIST_SIZE_PAGE = 5;
     private Integer count;
     private Integer totalSize;
+    public String action { get; set; }
     // custom size of list per page will be changed be user
     public Integer customListSize { get; set; }
     public List< Candidate__c > candidates {
@@ -25,31 +26,29 @@ public with sharing class MR_CandidatePagination {
         customListSize      = LIST_SIZE_PAGE;
     }
     
-    // User clicked to first
-    public PageReference toFirst () {
-        count = 0;
+    //result when click button First, Previous, Next, End
+     public PageReference selectAction () {
+         
+         //get paramater from apex
+         String action = Apexpages.currentPage().getParameters().get('paramValue');
+         
+        if(action == 'First') {
+           count = 0;
+        }
+        if(action == 'Previous') {
+           count -= customListSize;
+        }
+        if(action == 'Next') {
+           count += customListSize;
+        }
+        if(action == 'End') {
+
+            Integer mod = math.mod( totalSize, customListSize );
+        	count = mod != 0 ? totalSize - mod : totalSize - customListSize;
+        }
         return null;
     }
-
-    // User clicked previous button
-    public PageReference toPrevious () {
-        count -= customListSize;
-        return null;
-    }
-
-    // User clicked next button
-    public PageReference toNext () {
-        count += customListSize;
-        return null;
-    }
-
-    //Add condition to check if last page list is less than custom size list
-    public PageReference toEnd () {
-        Integer mod = math.mod( totalSize, customListSize );
-        count = mod != 0 ? totalSize - mod : totalSize - customListSize;
-        return null;
-    }
-
+    
     // This will disable the previous and first buttons
     public Boolean getDisablePrevious () {
         return count > 0 ? false : true;

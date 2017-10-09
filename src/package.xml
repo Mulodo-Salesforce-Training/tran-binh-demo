@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>CandidatePagination</members>
         <members>MR_CandidatePagination</members>
+        <members>MR_CandidatePaginationTest</members>
         <members>MR_CandidateRegister</members>
+        <members>MR_CandidateRegisterTest</members>
+        <members>MR_CandidateWeatherController</members>
         <members>MR_EmailManager</members>
+        <members>MR_EmailManagerTest</members>
+        <members>MR_Utils</members>
         <name>ApexClass</name>
     </types>
     <types>
         <members>MR_CandidateRegister</members>
+        <members>MR_CandidateWeatherControllerCC</members>
         <members>MR_ListCadidate</members>
         <members>MR_Position</members>
-        <members>Position</members>
         <name>ApexPage</name>
     </types>
     <types>
@@ -25,6 +31,7 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>Candidate_Weather_App</members>
         <members>Candidate__c</members>
         <members>Job_Application__c</members>
         <members>MR_Candidate_Register</members>

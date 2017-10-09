@@ -1,4 +1,4 @@
-<apex:page docType="html-5.0" standardController="Candidate__c" extensions="CandidateRegister" tabStyle="MR_Candidate_Register__tab">
+<apex:page docType="html-5.0" standardController="Candidate__c" extensions="MR_CandidateRegister" tabStyle="MR_Candidate_Register__tab">
     <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
     <style>
         #col1,#col2{width:49%;display:inline-block;}
