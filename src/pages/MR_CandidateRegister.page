@@ -124,8 +124,8 @@
                         <span class="slds-form-element__label">Currently Employed</span>
                         </label>
                        </div>
-
                     </div>
+                    
                     <div class="slds-grid" id="col1">
                        <div class="slds-col slds-size--3-of-4"><div class="slds-form-element__control">
                         <span class="slds-checkbox">
@@ -160,7 +160,7 @@
                 </apex:pageblock>
 
                 <div class="slds-form-element">
-                    <button class="slds-button slds-button_neutral" onclick="">Cancel</button>
+                    <button class="slds-button slds-button_neutral" onclick="{!URLFOR($Page.MR_ListCadidate)}">Cancel</button>
                     <button class="slds-button slds-button_neutral" onclick="getRemoteAccount();">Save</button>
                 </div>
             </div>

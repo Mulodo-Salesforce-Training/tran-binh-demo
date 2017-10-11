@@ -33,7 +33,7 @@ function getRemoteAccount () {
         function ( result, event ) {
             if ( event.status ) {
                 if ( event.result == firstName ) {
-                    document.getElementById( "responseResult" ).innerHTML = "Create success Candidates with first name: " + firstName;
+                    document.getElementById( "responseResult" ).innerHTML = "Create success Candidates with firstName: " + firstName;
                 } else {
                     document.getElementById( "responseResult" ).innerHTML = event.result + "<br/>";
                 }

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <classAccesses>
-        <apexClass>CandidatePagination</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>MR_CandidatePagination</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -25,6 +21,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MR_CandidateWeatherControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MR_EmailManager</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -34,6 +34,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>MR_Utils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MR_WeatherMock</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>

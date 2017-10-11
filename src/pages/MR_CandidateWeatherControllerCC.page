@@ -13,7 +13,7 @@
             <div class="slds-form-element">
                 <label class="slds-form-element__label" for="text-input-id-1">Longtitude: </label>
                 <div class="slds-form-element__control">
-                    <apex:outputText value="-0.09"/>
+                    <apex:outputText value="{!weatherInfo.coord.lon}"/>
                 </div>
             </div>
             <div class="slds-form-element">

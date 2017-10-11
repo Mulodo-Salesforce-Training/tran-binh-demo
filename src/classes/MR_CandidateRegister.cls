@@ -56,20 +56,20 @@ public with sharing class MR_CandidateRegister {
     }
 
     @RemoteAction
-	public static string getJSONCandidates() {
+	public static String getJSONCandidates() {
 		// serialize to JSON
 		return JSON.serialize([SELECT First_Name__c, Last_Name__c FROM Candidate__c]);
 	}
 
     @RemoteAction
-	public static string getCountryPickList() {
+	public static String getCountryPickList() {
 		Schema.DescribeFieldResult fieldCountry = Candidate__c.Country__c.getDescribe();
 		List<Schema.PicklistEntry> pickListCountry = fieldCountry.getPicklistValues();
 		return JSON.serialize(pickListCountry);
     }
     
     @RemoteAction
-	public static string getEducationPickList() {
+	public static String getEducationPickList() {
 		Schema.DescribeFieldResult fieldEducation = Candidate__c.Education__c.getDescribe();
 		List<Schema.PicklistEntry> pickListEducation = fieldEducation.getPicklistValues();
 		return JSON.serialize(pickListEducation);

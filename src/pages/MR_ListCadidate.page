@@ -18,7 +18,7 @@
                     <label>Records/Page </label>
                     <apex:commandButton styleClass="slds-button slds-button_neutral" reRender="CandidateTable, PaginationButton" value="Change size"/>
                     <button class="slds-button slds-button_neutral">
-                        <center><a href="apex/CandidateRegister">
+                        <center><a href="apex/MR_CandidateRegister">
                             New
                             </a></center>
                     </button>
@@ -85,6 +85,16 @@
                                             {!$ObjectType.Candidate__c.fields.Phone__c.Label}
                                         </div>
                                     </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Image">
+                                           Image
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Info Weather">
+                                           Info Weather
+                                        </div>
+                                    </th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -132,6 +142,18 @@
                                         <td scope="row" data-label="{!$ObjectType.Candidate__c.fields.Phone__c.Label}">
                                             <div class="slds-truncate" title="{! c.Phone__c}">
                                                 {! c.Phone__c}
+                                            </div>
+                                        </td>
+                                        <!--CUSTOM IMAGE-->
+                                        <td scope="col" data-label="Image">
+                                            <div class="slds-truncate" title="Image">
+                                                <apex:commandLink action="{!URLFOR($Page.UploadImage,null, [ id=c.Id ])}" value="Upload Image"/>
+                                            </div>
+                                        </td>
+                                         <!--CUSTOM ACTION-->
+                                        <td scope="col" data-label="View weather">
+                                            <div class="slds-truncate" title="View weather">
+                                                <apex:commandLink action="{!URLFOR($Page.CandidateWeatherControllerCC,null, [ id=c.Id ])}" value="View Weather"/>
                                             </div>
                                         </td>
                                     </tr>
